@@ -1,0 +1,77 @@
+@import "../vars";
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .aside{
+    display: none;
+  }
+  .header {
+    overflow: hidden;
+    border-bottom: #d9fff5 1px solid;
+    width: 768px;
+    height: 88px;
+    background-color: $white;
+    position: relative;
+    & img {
+      width: 40px;
+      height: 40px;
+    }
+    @mixin pr($pad) {
+      padding-right: $pad;
+    }
+    .burger {
+      border: none;
+      background-color: $white;
+    }
+    .button-p{
+      display: none;
+    }
+    .header__buttons {
+      padding-left: 16px;
+      padding-top: 24px;
+      display: flex;
+    }
+    .header__button-img {
+      display: flex;
+      margin-left: 380px;
+    }
+    .header__buttons-pics {
+      display: flex;
+      margin-left: 42px;
+    }
+    .button-call, 
+    .button-repair, 
+    .button-chat {
+      @include pr(20px);
+    }
+    
+    .header__logo img {
+      position: absolute;
+      width: 96px;
+      height: 50px;
+      left: 105px;
+      top: 20px;
+    }
+
+    .header__stick img {
+      position: absolute;
+      left: 82px;
+      top: 29px;
+      width: 2px;
+      height: 32px;
+    }
+    .header__devider img{
+        position: absolute;
+        width: 2px;
+        height: 32px;
+        right: 140px;
+        top: 30px;
+    }
+  }
+}

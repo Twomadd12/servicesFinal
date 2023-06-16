@@ -1,0 +1,329 @@
+@import "../vars";
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  @mixin headSection {
+    position: relative;
+    width: 768px;
+    height: 56px;
+    background: $bgColor;
+
+    border-top: #d9fff5 1px solid;
+  }
+  .section{
+    margin-bottom: 40px
+  }
+  .section__header-brands {
+    @include headSection;
+   
+  }
+
+  .section__header-repair {
+    @include headSection;
+  }
+  @mixin font {
+    font-family: "TT Lakes";
+    font-size: 16px;
+    padding-top: 15px;
+    padding-left: 24px;
+    color: $menu-text-color;
+  }
+  .header-text {
+    @include font;
+    background: $bgColor;
+
+    border-top: #d9fff5 2px solid;
+    
+  }
+  
+
+  .content__menu-brands {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    position: relative;
+    margin-top: 10px;
+  }
+  .content__brands {
+    display: flex;
+    position: relative;
+
+    padding-right: 24px;
+  }
+  .content__brands:first-child {
+    padding-top: 4px;
+  }
+  .content__other {
+    display: flex;
+    position: relative;
+    padding-top: 6px;
+
+    padding-right: 24px;
+
+    flex-direction: row;
+  }
+  .more {
+    display: none;
+  }
+  .content__other .brand__samsung {
+    width: 224px;
+
+    height: 72px;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    display: flex;
+    background-color: $white;
+    margin-left: 24px;
+    position: absolute;
+    left: 248px;
+    bottom: 0px;
+  }
+  .content__other .brand__apple {
+    width: 224px;
+    height: 72px;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    display: flex;
+    background-color: $white;
+    margin-left: 24px;
+    position: absolute;
+    left: 495px;
+    bottom: 0px;
+  }
+  .brand {
+    position: relative;
+    width: 224px;
+    min-width: 224px;
+    height: 72px;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    display: flex;
+    background-color: $white;
+    margin-left: 24px;
+    margin-top: 16px;
+  }
+  .brand__arrow {
+    padding: 16px 16px 16px 44px;
+  }
+  .brand__name-lenovo {
+    padding-top: 20px;
+    padding-left: 16px;
+  }
+  .brand__arrow-lenovo {
+    padding-top: 16px;
+    padding-left: 44px;
+  }
+  .brand__name-samsung {
+    padding-top: 17px;
+    padding-bottom: 16.48px;
+    padding-left: 16px;
+  }
+  .brand__arrow-samsung {
+    padding-left: 36px;
+    padding-top: 16px;
+  }
+  .brand__name-apple {
+    padding-top: 12px;
+    padding-left: 16px;
+  }
+  .brand__arrow-apple {
+    padding-left: 108px;
+    padding-top: 16px;
+  }
+  .brand__name-bosch {
+    padding-top: 21px;
+    padding-left: 16px;
+  }
+  .brand__arrow-bosch {
+    padding-left: 24px;
+    padding-top: 14px;
+  }
+  .brand__name-hp {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  .brand__arrow-hp {
+    padding-left: 106px;
+    padding-top: 16px;
+  }
+  .brand__name-acer {
+    padding-top: 24px;
+    padding-left: 16px;
+  }
+  .brand__arrow-acer {
+    padding-left: 58px;
+    padding-top: 16px;
+  }
+
+  .showAll {
+    position: relative;
+
+    padding-left: 34px;
+    margin-top: 10px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    background-color: $background;
+    width: 768px;
+  }
+  .showAll button {
+    font-family: "TT Lakes";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #1b1c21;
+    position: absolute;
+
+    left: 60px;
+    border: none;
+    background-color: $background;
+  }
+  .buttonImg {
+    top: 17px;
+  }
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+  .content__wrap {
+    display: flex;
+  }
+  .content__wrap-other {
+    display: flex;
+    position: relative;
+  }
+  .content__wrapper {
+    width: 234px;
+    height: 160px;
+    border: $border 1px solid;
+    margin: 20px;
+    background-color: $white;
+    border-radius: 6px;
+    position: relative;
+  }
+  .text-repair {
+    font-family: "TT Lakes";
+    font-size: 16px;
+    padding: 19px 0px 0px 18px;
+    font-weight: 500;
+  }
+  .repair-img {
+    padding-left: 155px;
+    padding-top: 75px;
+  }
+  .showInfo {
+    display: none;
+  }
+  @mixin fontFam {
+    font-family: "TT Lakes";
+    font-size: 14px;
+  }
+  .content__prices {
+    position: relative;
+    width: 768px;
+    margin-top: 25px;
+    background-color: $white;
+  }
+  .price-info:first-child {
+    color: $menu-text-color;
+    padding-top: 0px;
+    background-color: $background;
+    border: none;
+    width: 768px;
+  }
+  .price-info:last-child {
+    border: none;
+  }
+
+  .price-info {
+    display: flex;
+    margin-left: 40px;
+    padding-top: 28px;
+    border: $border 1px solid;
+    margin-right: 40px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    @include fontFam;
+  }
+  .price-name {
+    padding-top: 8px;
+    width: 370px;
+    @include fontFam;
+  }
+  .price {
+    width: 100px;
+    padding-top: 8px;
+    @include fontFam;
+  }
+  .price-term {
+    width: 100px;
+    padding-top: 8px;
+    @include fontFam;
+  }
+
+  .content-about-prices {
+    @include fontFam;
+    width: 421px;
+    height: 60px;
+    margin: 35px 0px 0px 24px;
+  }
+  .content-invite {
+    width: 310px;
+    height: 24px;
+    margin: 16px 0px 0px 24px;
+    @include fontFam;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .content-invite img {
+    padding-left: 2px;
+  }
+  .footer {
+    border: #d9fff5 1px solid;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    display: flex;
+    width: 768px;
+    height: 51px;
+    margin-top: 47px;
+    margin-bottom: 41px;
+  }
+  .apesong {
+    width: 290px;
+    height: 32px;
+    @include fontFam;
+    color: $menu-text-color;
+    padding: 32px 35px 41px 24px;
+  }
+  .politic {
+    @include fontFam;
+    color: $menu-text-color;
+    padding-top: 27px;
+  }
+  .information {
+    @include fontFam;
+    color: $menu-text-color;
+    padding-left: 40px;
+    width: 248px;
+    padding-top: 25px;
+  }
+  .footer{
+    background-color: $background;
+  }
+}
