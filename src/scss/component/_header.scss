@@ -9,7 +9,51 @@ html {
 
 @media (max-width: 768px) {
   .aside{
-    display: none;
+    width: 320px;
+    min-width: 320px;
+    background-color: $white;
+    height: 150vh;
+    margin: 0px;
+    font-family: "TT Lakes";
+    font-size: 16px;
+    color: $main-text-color;
+    font-weight: 500;
+    position: absolute;
+    left: -440px;
+    transition: left 0.7s ease-in-out;
+    box-shadow: 16px 0px 52px rgba(156, 108, 233, 0.349);
+    .logo-aside{
+      padding-top: 18px;
+      padding-left: 16px;
+    }
+    .search-aside{
+      padding-top: 24px;
+      padding-left: 90px;
+    }
+    .burger-cancel{
+      padding-top: 24px;
+      padding-left: 16px;
+      display: block;
+      border: none;
+      background-color: $white;
+    }
+    .burger-cancel button{
+      border: none;
+      background-color: $white;
+    }
+    .info-aside:first-child{
+      color: $menu-text-color;
+    }
+    #aside-color{
+      color: $main-text-color;
+    }
+    .highlight{
+      position: absolute;
+    width: 3px;
+    height: 28px;
+    left: -24px;
+    top: -5px;
+    }
   }
   .header {
     overflow: hidden;
@@ -28,6 +72,10 @@ html {
     .burger {
       border: none;
       background-color: $white;
+    }
+    button:hover {
+      background-color: $menu-text-color;
+      opacity: 0.7;
     }
     .button-p{
       display: none;
@@ -73,5 +121,9 @@ html {
         right: 140px;
         top: 30px;
     }
+    .sidebar-call{
+      display: none;
+    }
   }
+  
 }

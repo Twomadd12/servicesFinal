@@ -6,31 +6,33 @@
 html {
   box-sizing: border-box;
 }
+body {
+  box-sizing: border-box;
+}
 
 @media (max-width: 768px) {
   * {
     margin: 0;
     padding: 0;
   }
-  html {
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-  
+  // html {
+  //   box-sizing: border-box;
+  //   overflow: hidden;
+  // }
+
   @mixin headSection {
     position: relative;
-    width: 768px;
+
     height: 56px;
     background: $bgColor;
 
     border-top: #d9fff5 1px solid;
   }
-  .section{
-    margin-bottom: 40px
+  .section {
+    margin-bottom: 40px;
   }
   .section__header-brands {
     @include headSection;
-   
   }
 
   .section__header-repair {
@@ -48,9 +50,7 @@ html {
     background: $bgColor;
 
     border-top: #d9fff5 2px solid;
-    
   }
-  
 
   .content__menu-brands {
     display: flex;
@@ -117,6 +117,12 @@ html {
     margin-left: 24px;
     margin-top: 16px;
   }
+  .brand:last-child{
+    display: none;
+  }
+  .content__other .brand__Sony{
+   display: none;
+  }
   .brand__arrow {
     padding: 16px 16px 16px 44px;
   }
@@ -171,15 +177,11 @@ html {
   }
 
   .showAll {
-    position: relative;
-
-    padding-left: 34px;
     margin-top: 10px;
     height: 72px;
     display: flex;
     align-items: center;
     background-color: $background;
-    width: 768px;
   }
   .showAll button {
     font-family: "TT Lakes";
@@ -195,6 +197,10 @@ html {
   }
   .buttonImg {
     top: 17px;
+    
+  }
+  .showAll img{
+    margin-left: 35px;
   }
   .rotate-180 {
     transform: rotate(180deg);
@@ -215,6 +221,9 @@ html {
     border-radius: 6px;
     position: relative;
   }
+  .content__wrapper:last-child{
+    display: none;
+  }
   .text-repair {
     font-family: "TT Lakes";
     font-size: 16px;
@@ -234,16 +243,17 @@ html {
   }
   .content__prices {
     position: relative;
-    width: 768px;
+
     margin-top: 25px;
     background-color: $white;
+    margin-left: 40px;
+    margin-right: 40px;
   }
   .price-info:first-child {
     color: $menu-text-color;
     padding-top: 0px;
     background-color: $background;
     border: none;
-    width: 768px;
   }
   .price-info:last-child {
     border: none;
@@ -251,10 +261,10 @@ html {
 
   .price-info {
     display: flex;
-    margin-left: 40px;
+    
     padding-top: 28px;
     border: $border 1px solid;
-    margin-right: 40px;
+   
     border-top: none;
     border-left: none;
     border-right: none;
@@ -323,7 +333,13 @@ html {
     width: 248px;
     padding-top: 25px;
   }
-  .footer{
+  .footer {
     background-color: $background;
+  }
+  .swiper-container, .swiper-container-price, .swiper-pagination-price, .swiper-pagination-repair, .swiper-pagination-brand, .swiper__brand{
+    display: none;
+  }
+  .sidebar{
+    display: none;
   }
 }

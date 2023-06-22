@@ -3,12 +3,17 @@
     font-family: "TT Lakes";
     font-size: 16px;
   }
-
+  .main {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
   .header {
     position: relative;
     display: flex;
     margin-top: 40px;
     z-index: 1;
+    overflow: hidden;
   }
   .burger,
   .header__button-img,
@@ -33,6 +38,17 @@
     padding-top: 12px;
     padding-left: 20px;
   }
+  .section {
+    position: relative;
+  }
+  .section .content {
+    position: absolute;
+    top: -33px;
+    left: 30px;
+  }
+  .content-main {
+    width: 1120px;
+  }
   .content {
     position: absolute;
     @include fontF;
@@ -48,14 +64,16 @@
   .content__menu-brands {
     display: flex;
     flex-direction: column;
-    background-color: #f2f2f2;
+    background-color: $background;
     position: relative;
     margin-top: 10px;
   }
-  .content__info-image{
+  .content__info-image {
+    position: absolute;
     width: 531px;
-    height: 383px;
-
+    height: 303px;
+    top: 90px;
+    left: 30px;
   }
   .content__brands {
     display: flex;
@@ -70,7 +88,7 @@
     display: flex;
     position: relative;
     padding-top: 6px;
-
+    width: 240px;
     padding-right: 24px;
 
     flex-direction: row;
@@ -79,7 +97,7 @@
     display: none;
   }
   .content__other .brand__samsung {
-    width: 224px;
+    width: 240px;
 
     height: 72px;
     border: 1px solid #eaeaea;
@@ -88,11 +106,11 @@
     background-color: $white;
     margin-left: 24px;
     position: absolute;
-    left: 248px;
+    left: 265px;
     bottom: 0px;
   }
   .content__other .brand__apple {
-    width: 224px;
+    width: 240px;
     height: 72px;
     border: 1px solid #eaeaea;
     border-radius: 6px;
@@ -100,13 +118,25 @@
     background-color: $white;
     margin-left: 24px;
     position: absolute;
-    left: 495px;
+    left: 528px;
+    bottom: 0px;
+  }
+  .content__other .brand__Sony {
+    width: 240px;
+    height: 72px;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    display: flex;
+    background-color: $white;
+    margin-left: 24px;
+    position: absolute;
+    left: 793px;
     bottom: 0px;
   }
   .brand {
     position: relative;
-    width: 224px;
-    min-width: 224px;
+    width: 240px;
+    min-width: 240px;
     height: 72px;
     border: 1px solid #eaeaea;
     border-radius: 6px;
@@ -124,7 +154,7 @@
   }
   .brand__arrow-lenovo {
     padding-top: 16px;
-    padding-left: 44px;
+    padding-left: 54px;
   }
   .brand__name-samsung {
     padding-top: 17px;
@@ -132,7 +162,7 @@
     padding-left: 16px;
   }
   .brand__arrow-samsung {
-    padding-left: 36px;
+    padding-left: 56px;
     padding-top: 16px;
   }
   .brand__name-apple {
@@ -140,12 +170,20 @@
     padding-left: 16px;
   }
   .brand__arrow-apple {
-    padding-left: 108px;
+    padding-left: 128px;
     padding-top: 16px;
+  }
+  .brand__name-viewSonic {
+    padding-top: 30px;
+    padding-left: 25px;
+  }
+  .brand__arrow-viewSonic {
+    padding-top: 20px;
+    padding-left: 35px;
   }
   .brand__name-bosch {
     padding-top: 21px;
-    padding-left: 16px;
+    padding-left: 26px;
   }
   .brand__arrow-bosch {
     padding-left: 24px;
@@ -156,7 +194,7 @@
     padding-left: 10px;
   }
   .brand__arrow-hp {
-    padding-left: 106px;
+    padding-left: 126px;
     padding-top: 16px;
   }
   .brand__name-acer {
@@ -164,20 +202,29 @@
     padding-left: 16px;
   }
   .brand__arrow-acer {
-    padding-left: 58px;
+    padding-left: 78px;
+    padding-top: 16px;
+  }
+  .brand__name-Sony {
+    padding-top: 24px;
+    padding-left: 22px;
+  }
+  .brand__arrow-Sony {
+    padding-left: 38px;
     padding-top: 16px;
   }
 
   .showAll {
     position: relative;
-
+    width: 50px;
     padding-left: 34px;
-    margin-top: 10px;
+    white-space: nowrap;
     height: 72px;
     display: flex;
     align-items: center;
     background-color: $background;
   }
+  
   .showAll button {
     font-family: "TT Lakes";
     font-style: normal;
@@ -204,10 +251,10 @@
     position: relative;
   }
   .content__wrapper {
-    width: 234px;
+    width: 244px;
     height: 160px;
     border: $border 1px solid;
-    margin: 20px;
+    margin: 16px;
     background-color: $white;
     border-radius: 6px;
     position: relative;
@@ -219,7 +266,7 @@
     font-weight: 500;
   }
   .repair-img {
-    padding-left: 155px;
+    padding-left: 175px;
     padding-top: 75px;
   }
   .showInfo {
@@ -231,16 +278,18 @@
   }
   .content__prices {
     position: relative;
-    width: 768px;
+    width: 1440px;
     margin-top: 25px;
     background-color: $white;
+    margin-left: 40px;
+    margin-right: 40px;
   }
   .price-info:first-child {
     color: $menu-text-color;
     padding-top: 0px;
     background-color: $background;
     border: none;
-    width: 768px;
+    width: 1440px;
   }
   .price-info:last-child {
     border: none;
@@ -248,28 +297,31 @@
 
   .price-info {
     display: flex;
-    margin-left: 40px;
+    
     padding-top: 28px;
     border: $border 1px solid;
-    margin-right: 40px;
+    
     border-top: none;
     border-left: none;
     border-right: none;
+    width: 1440px;
     @include fontFam;
   }
   .price-name {
     padding-top: 8px;
-    width: 370px;
+    width: 480px;
     @include fontFam;
   }
   .price {
-    width: 100px;
+    width: 220px;
     padding-top: 8px;
+
     @include fontFam;
   }
   .price-term {
-    width: 100px;
+    width: 200px;
     padding-top: 8px;
+
     @include fontFam;
   }
 
@@ -328,7 +380,19 @@
     padding-top: 32px;
     margin-left: 24px;
     white-space: nowrap;
+    display: none;
   }
+  .content__services-desktop {
+    display: flex;
+    padding-top: 10px;
+    margin-left: 39px;
+    white-space: nowrap;
+    flex-wrap: wrap;
+  }
+  .content__services-desktop .services:last-child {
+    padding-top: 16px;
+  }
+
   .services {
     color: $menu-text-color;
     font-family: "TT Lakes";
@@ -360,16 +424,20 @@
 
     border-top: #d9fff5 1px solid;
   }
-  .section{
-    margin-bottom: 40px
+  .section {
+    margin-bottom: 40px;
+  }
+  .section__main {
+    margin-top: 125px;
   }
   .section__header-brands {
     @include headSection;
-   
   }
 
   .section__header-repair {
     @include headSection;
+    margin-top: 30px;
+    width: 1440px;
   }
   @mixin font {
     font-family: "TT Lakes";
@@ -381,18 +449,17 @@
   .header-text {
     @include font;
     background: $bgColor;
-
+    width: 1440px;
     border-top: #d9fff5 2px solid;
-    
   }
   .content__info {
     position: relative;
     display: flex;
-    padding-top: 36px;
-    margin-left: 24px;
+    padding-top: 20px;
+    margin-left: 34px;
   }
   .text {
-    width: 309px;
+    width: 490px;
     height: 160px;
     font-family: "TT Lakes";
     font-weight: 500;
@@ -401,18 +468,32 @@
   }
   .content__info-image img {
     position: absolute;
-    left: 650px;
-    top: 195px;
+    left: 510px;
+    top: 10px;
     border-radius: 8px;
+    width: 531px;
+    height: 303px;
   }
-  .read-more{
+  .read-more {
     margin-top: 10px;
     margin-left: 23px;
   }
-  footer{
+  footer {
     border-right: none;
     border-left: none;
     border-bottom: none;
-    background-color:#F8F8F8;
+    background-color: #f8f8f8;
+  }
+  .swiper-container,
+  .swiper-container-price,
+  .swiper-pagination-price,
+  .swiper-pagination-repair,
+  .swiper-pagination-brand,
+  .swiper__brand,
+  .swiper__container-brand {
+    display: none;
+  }
+  .swiper-pagination {
+    display: none;
   }
 }

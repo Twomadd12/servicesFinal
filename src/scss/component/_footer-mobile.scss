@@ -1,0 +1,47 @@
+@import "../vars";
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    box-sizing: border-box;
+  }
+  @mixin footerSize{
+    font-family: 'TT Lakes';
+font-size: 11px;
+  }
+  @media(max-width:320px){
+    .footer{
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include footerSize;
+        
+    }
+    .footer:first-child{
+        text-align: center;
+        padding-top: 50px;
+        @include footerSize;
+       
+    }
+    .apesong{
+        @include footerSize;
+    }
+    .politic{
+        padding-top: 0px;
+        padding-right: 18px;
+        @include footerSize;
+    }
+    .information{
+        width: 320px;
+        height: 32px;
+        padding-right: 50px;
+        padding-top: 15px;
+        
+        @include footerSize;
+       
+    }
+  }

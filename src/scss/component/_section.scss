@@ -8,6 +8,10 @@ html {
 }
 
 @media (max-width: 768px){
+  .main{
+    overflow: hidden;
+    
+  }
   .section {
     
     background-color: $background;
@@ -26,6 +30,7 @@ html {
       padding-top: 32px;
       margin-left: 24px;
       white-space: nowrap;
+      overflow: hidden;
     }
     .services {
       color: $menu-text-color;
@@ -35,6 +40,9 @@ html {
       line-height: 24px;
       padding-left: 20px;
       padding-top: 10px;
+    }
+    .content__services-desktop{
+      display: none;
     }
     .services:first-child {
       border: $border-color 2px solid;
@@ -63,17 +71,29 @@ html {
       font-weight: 500;
       font-size: 14px;
       line-height: 20px;
+      overflow: hidden;
     }
     .content__info-image img {
       position: absolute;
-      left: 380px;
-      top: 253px;
+      left: 365px;
+      top: 255px;
       border-radius: 8px;
     }
     .read-more{
       margin-top: 10px;
       margin-left: 23px;
     }
+    
   }
+  .swiper-container{
+    display: none;
+  }
+  .swiper-pagination {
+    display: none;
+  }
+  .swiper__container-brand{
+    display: none;
+  }
+  
 }
 

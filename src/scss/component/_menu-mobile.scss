@@ -1,0 +1,19 @@
+@import "../vars";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+}
+.menu__mobile{
+  width: 320px;
+  background-color: $white;
+   
+    margin: 0px;
+    font-family: "TT Lakes";
+    font-size: 16px;
+    color: $main-text-color;
+    font-weight: 500;
+}

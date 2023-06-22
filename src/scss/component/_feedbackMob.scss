@@ -1,0 +1,75 @@
+@import "../vars";
+
+@media (max-width: 320px) {
+    .sidebar-main{
+      
+      width: 320px;
+      background-color: $white;
+  
+      position: absolute;
+      left: -550px;
+  
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      font-family: "TT Lakes";
+      transition: left 0.7s ease-in-out;
+      .call-sidebar {
+        font-size: 22px;
+        font-weight: 900;
+        padding-top: 74px;
+        padding-left: 22px;
+      }
+      .number-sidebar {
+        padding-left: 22px;
+        padding-top: 20px;
+      }
+      .number-sidebar input {
+        width: 280px;
+        height: 48px;
+        padding-left: 10px;
+        border: $border 1px solid;
+        border-radius: 7px;
+      }
+      .number-sidebar input::placeholder {
+        color: $placeholder;
+      }
+      .text-sidebar {
+        padding-left: 22px;
+        padding-top: 10px;
+        width: 310px;
+        height: 48px;
+        font-size: 14px;
+        color: $menu-text-color;
+        font-weight: 500;
+      }
+      .text-sidebar span {
+        color: $colorSide;
+      }
+      .send-sidebar {
+        padding-top: 55px;
+        padding-left: 160px;
+      }
+      .stick-sidebar {
+        position: absolute;
+        top: 65px;
+      }
+      .stick-sidebar img {
+        width: 3px;
+        height: 33px;
+      }
+      .cancel-feedback {
+        position: absolute;
+        top: 10px;
+        left: 16px;
+        border: none;
+        background-color: $white;
+      }
+      .number-sidebar-message input {
+        width: 281px;
+        
+    }
+
+    }
+  }
+  
